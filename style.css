@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    background-color: #f7f7f7;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    max-width: 60%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header_h1 {
+    font-size: 2.2rem;
+    font-weight: 100;
+}
+
+.header_h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+
+.header_text {
+    width: 80%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+main {
+    padding: 2rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        ". card2 . "
+        "card1 card2 card4"
+        "card1 card3 card4"
+        ". card3 .";
+}
+
+.card {
+    background-color: #fff;
+    padding: .5rem 1.5rem;
+    box-shadow: 1px 5px 16px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    min-height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card_title {
+    flex: 0 0 0;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.card_text {
+    flex: 1 0 0;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.card_image {
+    flex: 0 0 0;
+    margin: 2rem .5rem .5rem;
+    width: 3rem;
+    height: 3rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.card1 {
+    grid-area: card1;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card2 {
+    grid-area: card2;
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card3 {
+    grid-area: card3;
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card4 {
+    grid-area: card4;
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.attribution {
+    margin-top: 5rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 775px) {
+
+    .header_h1 {
+        font-size: 1.2rem;
+    }
+
+    .header_h2 {
+        font-size: 1.3rem;
+    }
+
+    .header_text {
+        font-size: .75rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 1.5rem;
+    }
+
+    .card_title {
+        font-size: 1.2rem;
+    }
+
+    .card_text {
+        font-size: .75rem;
+    }
+}
